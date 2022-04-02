@@ -3,10 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:View ="clr-namespace:Projekt_Dieta.Views"
         xmlns:local="clr-namespace:Projekt_Dieta"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="AliceBlue">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <!-- Current window -->
+        <Frame Grid.Row="1" Grid.Column="0" x:Name="ActiveItem" NavigationUIVisibility="Hidden"/>
+        <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Menu" Grid.Column="0" Click="Menu_Button_Click" />
+            <Button Content="Stats" Grid.Column="1" Click="Stats_Button_Click"/>
+            <Button Content="Calendar" Grid.Column="2" Click="Calendar_Button_Click"/>
+
+        </Grid>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_Dieta.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace Projekt_Dieta
         public MainWindow()
         {
             InitializeComponent();
+            ActiveItem.Content = new MenuView();
+        }
+
+        private void Menu_Button_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveItem.Content = new MenuView();
+        }
+
+        private void Stats_Button_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveItem.Content = new StatsView();
+        }
+
+        private void Calendar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveItem.Content = new CalendarView();
         }
     }
 }
