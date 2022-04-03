@@ -27,6 +27,19 @@ namespace Projekt_Dieta
             ActiveItem.Content = new MenuView();
         }
 
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void Close_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void Menu_Button_Click(object sender, RoutedEventArgs e)
         {
             ActiveItem.Content = new MenuView();

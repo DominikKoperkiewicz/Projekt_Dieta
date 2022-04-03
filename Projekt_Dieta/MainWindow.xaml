@@ -7,30 +7,58 @@
         xmlns:local="clr-namespace:Projekt_Dieta"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        Background="AliceBlue">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-
-        </Grid.RowDefinitions>
-
-        <!-- Current window -->
-        <Frame Grid.Row="1" Grid.Column="0" x:Name="ActiveItem" NavigationUIVisibility="Hidden"/>
-        <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent">
+    <Border Background="#242424"
+            CornerRadius="15"
+            MouseDown="Border_MouseDown">
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Menu" Grid.Column="0" Click="Menu_Button_Click" />
-            <Button Content="Stats" Grid.Column="1" Click="Stats_Button_Click"/>
-            <Button Content="Calendar" Grid.Column="2" Click="Calendar_Button_Click"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
 
+            </Grid.RowDefinitions>
+
+            <!-- Current window -->
+            <Frame Grid.Row="1" Grid.Column="0" x:Name="ActiveItem" NavigationUIVisibility="Hidden"/>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Menu" Grid.Column="0" Click="Menu_Button_Click"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#3FA142"/>
+                <Button Content="Stats" Grid.Column="1" Click="Stats_Button_Click"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#3FA142"/>
+                <Button Content="Calendar" Grid.Column="2" Click="Calendar_Button_Click"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#3FA142"/>
+
+            </Grid>
+            <StackPanel Grid.Column="3"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal"
+                        Margin="0, 0,12,0">
+                <Button Width="20" Height="20"
+                            Content="✖"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#3FA142"
+                            Click="Close_Button_Click"/>
+
+            </StackPanel>
         </Grid>
-    </Grid>
+    </Border>
 </Window>
