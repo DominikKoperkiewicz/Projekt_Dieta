@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projekt_Dieta.DataAccess;
+using Projekt_Dieta.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,12 @@ namespace Projekt_Dieta.Views
         public MenuView()
         {
             InitializeComponent();
+            List<Dish> Dishes;
+            using (var context = new EntriesContext())
+            {
+                Dishes = context.Dishes.ToList();
+            }
+            entryList.ItemsSource = Dishes;
         }
     }
 }
