@@ -12,7 +12,10 @@ namespace Projekt_Dieta.Models
         public int Id { get; set; }
         public DateTime Date { get; set; }
 
+        [ForeignKey("Dish")]
         public int DishId { get; set; }
         public int Kcal { get; set; }
+
+        public virtual Dish Dish { get; set; }
     }
 }
