@@ -8,8 +8,17 @@ using System.Threading.Tasks;
 
 namespace Projekt_Dieta.API
 {
+    /// <summary>
+    /// Class that reads dishes data from api
+    /// </summary>
     public class DishProcessor
     {
+        /// <summary>
+        /// Loads dish info to a dish class.
+        /// </summary>
+        /// <param name="dishID"></param> id used by api to fetch all informations
+        /// <returns>Dish class filled with all necessary informations</returns>
+        /// <exception cref="Exception"></exception>
         public static async Task<Dish> LoadDish(int dishID)
         {
             string url = $"https://api.spoonacular.com/recipes/informationBulk?ids={ dishID }&includeNutrition=true&apiKey=ef70bb600b644411936f9c2ffc9bb265";

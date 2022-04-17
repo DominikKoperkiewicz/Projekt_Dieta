@@ -14,18 +14,5 @@ namespace Projekt_Dieta.Models
         public string Instructions { get; set; }
         public NutrientsInfo Nutrition { get; set; }
 
-        /// <summary>
-        /// Leaves only info about calories, fat and carbs.
-        /// </summary>
-        //public void RemoveUnnecesaryNutritionInfo()
-        //{
-        //    foreach (var nutrition in Nutrition)
-        //    {
-        //        if (nutrition.Name != "Calories" || nutrition.Name != "Fat" || nutrition.Name != "Carbohydrates")
-        //        {
-        //            Nutrition.Remove(nutrition);
-        //        }
-        //    }
-        //}
     }
 }

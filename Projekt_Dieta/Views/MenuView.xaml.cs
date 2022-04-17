@@ -29,6 +29,11 @@ namespace Projekt_Dieta.Views
             InitializeComponent();
 
         }
+        /// <summary>
+        /// Loads dish using it's id and displays it in a test label
+        /// </summary>
+        /// <param name="dish_id"></param> dish ID used by api
+        /// <returns></returns>
         private async Task LoadDish(int dish_id)
         {
             var dish = await DishProcessor.LoadDish(dish_id);
@@ -39,6 +44,7 @@ namespace Projekt_Dieta.Views
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            // Makes sure all the info gets loaded onto the page
             await LoadDish(715538);
         }
     }

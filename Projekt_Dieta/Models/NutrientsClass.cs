@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projekt_Dieta.Models
 {
+    /// <summary>
+    /// Retrieves info about nutrients from api
+    /// </summary>
     public class NutrientsClass
     {
         public string Name { get; set; }

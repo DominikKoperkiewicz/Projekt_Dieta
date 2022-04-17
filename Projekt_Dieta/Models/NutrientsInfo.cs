@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Projekt_Dieta.Models
 {
+    /// <summary>
+    /// Helps with retrieving info about nutrients from api
+    /// </summary>
     public class NutrientsInfo
     {
         public List<NutrientsClass> Nutrients;
 
+        /// <summary>
+        /// Converts important nutrition info to string
+        /// </summary>
+        /// <returns> String with Calories, Fat and Carbohydrates</returns>
         public string NutriInfoString()
         {
             string result = "No nutri info! ";
