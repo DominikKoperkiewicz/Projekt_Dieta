@@ -1,4 +1,5 @@
-﻿using Projekt_Dieta.DataAccess;
+﻿using Projekt_Dieta.API;
+using Projekt_Dieta.DataAccess;
 using Projekt_Dieta.Models;
 using System;
 using System.Collections.Generic;
@@ -22,15 +23,24 @@ namespace Projekt_Dieta.Views
     /// </summary>
     public partial class MenuView : Page
     {
+
         public MenuView()
         {
             InitializeComponent();
-            List<Dish> Dishes;
-            using (var context = new EntriesContext())
-            {
-                Dishes = context.Dishes.ToList();
-            }
-            entryList.ItemsSource = Dishes;
+
+        }
+        private async Task LoadDish(int dish_id)
+        {
+            var dish = await DishProcessor.LoadDish(dish_id);
+
+            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" + dish.SpoonacularSourceUrl + "\n" + dish.Instructions;
+
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            await LoadDish(715538);
         }
     }
+
 }

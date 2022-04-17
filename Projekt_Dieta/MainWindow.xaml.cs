@@ -1,4 +1,5 @@
-﻿using Projekt_Dieta.Views;
+﻿using Projekt_Dieta.API;
+using Projekt_Dieta.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Projekt_Dieta
         public MainWindow()
         {
             InitializeComponent();
+            ApiHelper.InitializeClient();
             ActiveItem.Content = new MenuView();
         }
 

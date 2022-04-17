@@ -14,8 +14,6 @@ namespace Projekt_Dieta.DataAccess
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
-        public DbSet<Entry> Entries { get; set; }
-        public DbSet<Dish> Dishes { get; set; }
-        //tutaj DbSet skladnikow 
+        //public DbSet<Entry> Entries { get; set; }
     }
 }
