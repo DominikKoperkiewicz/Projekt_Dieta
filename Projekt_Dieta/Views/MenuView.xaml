@@ -10,9 +10,6 @@
       Background="#181818">
 
     <Grid>
-<<<<<<< HEAD
-        <Label x:Name="test_label"/>
-=======
 
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -42,7 +39,6 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
->>>>>>> origin/front_search_bar
 
     </Grid>
 </Page>
