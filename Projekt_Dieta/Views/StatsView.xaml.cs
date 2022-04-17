@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_Dieta.API;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace Projekt_Dieta.Views
         public StatsView()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Loads dish using it's id and displays it in a test label
+        /// </summary>
+        /// <param name="dish_id"></param> dish ID used by api
+        /// <returns></returns>
+        private async Task LoadDish(int dish_id)
+        {
+            var dish = await DishProcessor.LoadDish(dish_id);
+
+            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" + dish.SpoonacularSourceUrl + "\n" + dish.Instructions;
+
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Makes sure all the info gets loaded onto the page
+            await LoadDish(715538);
         }
     }
 }

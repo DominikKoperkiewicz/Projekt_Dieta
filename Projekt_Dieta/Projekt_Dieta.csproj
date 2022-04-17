@@ -76,12 +76,9 @@
     <Compile Include="DataAccess\EntriesContext.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\Entry.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\NutrientsClass.cs" />
     <Compile Include="Models\NutrientsInfo.cs" />
-=======
     <Compile Include="ViewModel\Search.cs" />
->>>>>>> origin/front_search_bar
     <Compile Include="Views\CalendarView.xaml.cs">
       <DependentUpon>CalendarView.xaml</DependentUpon>
     </Compile>
