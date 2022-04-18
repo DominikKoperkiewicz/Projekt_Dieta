@@ -35,7 +35,10 @@ namespace Projekt_Dieta.Views
         {
             var dish = await DishProcessor.LoadDish(dish_id);
 
-            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" + dish.SpoonacularSourceUrl + "\n" + dish.Instructions;
+            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" 
+                + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" + 
+                dish.ExtendedIngredients.First().Original + " " + dish.Nutrition.NutriInfoFat();
+
 
         }
 

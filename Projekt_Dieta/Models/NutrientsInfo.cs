@@ -31,5 +31,36 @@ namespace Projekt_Dieta.Models
             }
             return result;
         }
+        
+        /// <summary>
+        /// Retrieves calories
+        /// </summary>
+        /// <returns>Float with calories ammount</returns>
+        public float NutriInfoCalories()
+        {
+            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Calories").Amount;
+
+            return result;
+        }
+        /// <summary>
+        /// Retrieves fat
+        /// </summary>
+        /// <returns>Float with fat ammount</returns>
+        public float NutriInfoFat()
+        {
+            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Fat").Amount;
+
+            return result;
+        }
+        /// <summary>
+        /// Retrieves carbs
+        /// </summary>
+        /// <returns>Float with carbs ammount</returns>
+        public float NutriInfoCarbs()
+        {
+            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Carbohydrates").Amount;
+
+            return result;
+        }
     }
 }
