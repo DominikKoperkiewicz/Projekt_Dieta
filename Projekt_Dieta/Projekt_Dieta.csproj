@@ -75,6 +75,8 @@
     <Compile Include="API\DishProcessor.cs" />
     <Compile Include="DataAccess\EntriesContext.cs" />
     <Compile Include="Models\Dish.cs" />
+    <Compile Include="Models\DishSearchResult.cs" />
+    <Compile Include="Models\DishSearchResults.cs" />
     <Compile Include="Models\Entry.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\NutrientsClass.cs" />

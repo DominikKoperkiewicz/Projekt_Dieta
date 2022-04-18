@@ -39,11 +39,21 @@ namespace Projekt_Dieta.Views
                 + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" + 
                 dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
         }
+        private async Task LoadDishes(string query)
+        {
+            var dish = await DishProcessor.LoadDishes(query);
+
+            foreach (var item in dish.Results)
+            {
+                test_label.Content += item.Title + "\n";
+            }
+        }
+
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             // Makes sure all the info gets loaded onto the page
-            await LoadDish(715538);
+            await LoadDishes("Chicken");
         }
     }
 }
