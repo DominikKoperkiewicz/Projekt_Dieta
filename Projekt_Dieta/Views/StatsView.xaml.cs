@@ -53,7 +53,7 @@ namespace Projekt_Dieta.Views
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             // Makes sure all the info gets loaded onto the page
-            await LoadDishes("Chicken");
+            await LoadDishes("Chicken broth");
         }
     }
 }

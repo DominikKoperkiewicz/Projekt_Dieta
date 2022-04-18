@@ -74,6 +74,11 @@
     <Compile Include="API\ApiHelper.cs" />
     <Compile Include="API\DishProcessor.cs" />
     <Compile Include="DataAccess\EntriesContext.cs" />
+    <Compile Include="Migrations\202204181444140_InitialCreate.cs" />
+    <Compile Include="Migrations\202204181444140_InitialCreate.designer.cs">
+      <DependentUpon>202204181444140_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishSearchResult.cs" />
     <Compile Include="Models\DishSearchResults.cs" />
@@ -138,6 +143,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202204181444140_InitialCreate.resx">
+      <DependentUpon>202204181444140_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
