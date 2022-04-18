@@ -76,7 +76,7 @@
     <Compile Include="DataAccess\EntriesContext.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\Entry.cs" />
-    <Compile Include="Models\Ingredients.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\NutrientsClass.cs" />
     <Compile Include="Models\NutrientsInfo.cs" />
     <Compile Include="ViewModel\Search.cs" />

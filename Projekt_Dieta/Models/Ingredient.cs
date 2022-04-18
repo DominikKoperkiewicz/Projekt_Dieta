@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_Dieta.Models
 {
-    public class Ingredients
+    public class Ingredient
     {
         public string Original;
     }

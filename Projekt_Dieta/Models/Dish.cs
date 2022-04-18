@@ -13,7 +13,25 @@ namespace Projekt_Dieta.Models
         public string SpoonacularSourceUrl { get; set; }
         public string Instructions { get; set; }
         public NutrientsInfo Nutrition { get; set; }
-        public List<Ingredients> ExtendedIngredients;
+        public List<Ingredient> ExtendedIngredients { get; set; }
 
+        /// <summary>
+        /// Returns ingredients in a string
+        /// </summary>
+        /// <returns>String of ingredients in format "a";"b";"c"</returns>
+        public string GetIngredients()
+        {
+            string result = "Can't find ingredients";
+            if (this.ExtendedIngredients != null)
+            {
+                result = String.Empty;
+                foreach (var item in ExtendedIngredients)
+                {
+                    result += $"{item.Original}|";
+                }
+            }
+            return result;
+        }
     }
+
 }

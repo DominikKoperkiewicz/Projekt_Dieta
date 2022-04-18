@@ -37,9 +37,7 @@ namespace Projekt_Dieta.Views
 
             test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" 
                 + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" + 
-                dish.ExtendedIngredients.First().Original + " " + dish.Nutrition.NutriInfoFat();
-
-
+                dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)

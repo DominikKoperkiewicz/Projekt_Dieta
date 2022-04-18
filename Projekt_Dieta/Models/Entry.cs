@@ -10,8 +10,8 @@ namespace Projekt_Dieta.Models
     public class Entry
     {
         public int Id { get; set; }
-        public int DishID { get; set; }
         public DateTime Date { get; set; }
+        public int DishID { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
         public string Recipe { get; set; }
@@ -26,7 +26,10 @@ namespace Projekt_Dieta.Models
             Title = dish.Title;
             Url = dish.SpoonacularSourceUrl;
             Recipe = dish.Instructions;
-            
+            Calories = dish.Nutrition.NutriInfoCalories();
+            Fat = dish.Nutrition.NutriInfoFat();
+            Carbohydrates = dish.Nutrition.NutriInfoCarbs();
+            Ingrideints = dish.GetIngredients();
         }
     }
     
