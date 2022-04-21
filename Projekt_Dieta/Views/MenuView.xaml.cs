@@ -30,12 +30,7 @@ namespace Projekt_Dieta.Views
         public MenuView()
         {
             InitializeComponent();
-            /* USUNĄĆ*/
-            Dish tmp = new Dish();
-            tmp.Id = 213742;
-            tmp.Title = "Papa Pasta";
-            for (int i = 0; i < 10; i++)
-                DataGridXAML.Items.Add(tmp);
+
         }
 
         private async Task LoadDishes(string query)

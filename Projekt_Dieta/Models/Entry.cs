@@ -32,6 +32,10 @@ namespace Projekt_Dieta.Models
             Ingrideints = dish.GetIngredients();
             Date = date;
         }
+        public Entry()
+        {
+
+        }
     }
     
 }

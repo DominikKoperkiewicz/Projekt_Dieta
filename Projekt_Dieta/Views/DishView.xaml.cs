@@ -52,7 +52,16 @@ namespace Projekt_Dieta.Views
             if(datePicker.SelectedDate != null)
             {
                 Entry entry = new Entry(currentDish, new DateTime(datePicker.SelectedDate.Value.Ticks));
+                AddNewEntry(entry);
                 datePicker.SelectedDate = null;
+            }
+        }
+        private void AddNewEntry(Entry entry)
+        {
+            using (var context = new EntriesContext())
+            {
+                context.Entries.Add(entry);
+                context.SaveChanges();
             }
         }
     }

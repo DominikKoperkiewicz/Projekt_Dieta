@@ -1,4 +1,5 @@
 ﻿using Projekt_Dieta.API;
+using Projekt_Dieta.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,36 +25,47 @@ namespace Projekt_Dieta.Views
         public StatsView()
         {
             InitializeComponent();
+            test();
+            
         }
-
+        private void test()
+        {
+            using (var context = new EntriesContext())
+            {
+                foreach (var entry in context.Entries)
+                {
+                    test_label.Content += entry.Title + " \n";
+                }
+            }
+        }
         /// <summary>
         /// Loads dish using it's id and displays it in a test label
         /// </summary>
         /// <param name="dish_id"></param> dish ID used by api
         /// <returns></returns>
-        private async Task LoadDish(int dish_id)
-        {
-            var dish = await DishProcessor.LoadDish(dish_id);
+        //private async Task LoadDish(int dish_id)
+        //{
+        //    var dish = await DishProcessor.LoadDish(dish_id);
 
-            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n"
-                + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" +
-                dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
-        }
-        private async Task LoadDishes(string query)
-        {
-            var dish = await DishProcessor.LoadDishes(query);
+        //    test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n"
+        //        + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" +
+        //        dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
+        //}
+        //private async Task LoadDishes(string query)
+        //{
+        //    var dish = await DishProcessor.LoadDishes(query);
 
-            foreach (var item in dish.Results)
-            {
-                test_label.Content += item.Title + "\n";
-            }
-        }
+        //    foreach (var item in dish.Results)
+        //    {
+        //        test_label.Content += item.Title + "\n";
+        //    }
+        //}
 
 
-        private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Makes sure all the info gets loaded onto the page
-            //await LoadDishes("Chicken broth");
-        }
+        //private async void Page_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    // Makes sure all the info gets loaded onto the page
+        //    //await LoadDishes("Chicken broth");
+        //}
     }
 }
