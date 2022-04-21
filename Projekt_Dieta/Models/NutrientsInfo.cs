@@ -25,13 +25,33 @@ namespace Projekt_Dieta.Models
                 result = String.Empty;
                 foreach (var item in this.Nutrients)
                 {
-                    if (item.Name == "Calories" || item.Name == "Fat" || item.Name == "Carbohydrates")
-                    result += item.Name + " " + item.Amount.ToString() + item.Unit + " \n";
+                    if (item.Name == "Calories")
+                        result += item.Amount.ToString() + item.Unit + " ";
+                    if (item.Name == "Fat")
+                        result += item.Amount.ToString() + item.Unit + " Fat ";
+                    if (item.Name == "Carbohydrates")
+                        result += item.Amount.ToString() + item.Unit + " Carbs ";
                 }
             }
             return result;
         }
-        
+
+        public string NutriInfoStringLong()
+        {
+            string result = "No nutri info! ";
+            if (this.Nutrients != null)
+            {
+                result = String.Empty;
+                foreach (var item in this.Nutrients)
+                {
+                    if (item.Name == "Calories" || item.Name == "Fat" || item.Name == "Carbohydrates")
+                        result +=item.Name + " " + item.Amount.ToString() + item.Unit + " ";
+
+                }
+            }
+            return result;
+        }
+
         /// <summary>
         /// Retrieves calories
         /// </summary>

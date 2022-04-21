@@ -34,7 +34,7 @@ namespace Projekt_Dieta.Views
             Dish tmp = new Dish();
             tmp.Id = 213742;
             tmp.Title = "Papa Pasta";
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
                 DataGridXAML.Items.Add(tmp);
         }
 
@@ -44,10 +44,8 @@ namespace Projekt_Dieta.Views
             list = dish.Results;
             foreach (var item in dish.Results)
             {
-                Dish tmp = new Dish();
-                tmp.Id = item.Id;
-                tmp.Title = item.Title;
-                DataGridXAML.Items.Add(tmp);
+                item.UpdateNutriString();
+                DataGridXAML.Items.Add(item);
             }
         }
 
