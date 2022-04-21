@@ -8,6 +8,7 @@ namespace Projekt_Dieta.Models
 {
     public class DishSearchResult
     {
+        public int Id;
         public string Title;
         public NutrientsInfo Nutrition { get; set; }
     }

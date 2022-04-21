@@ -20,7 +20,7 @@ namespace Projekt_Dieta.Models
         public float Carbohydrates { get; set; }
         public string Ingrideints { get; set; }
 
-        public Entry(Dish dish)
+        public Entry(Dish dish, DateTime date)
         {
             DishID = dish.Id;
             Title = dish.Title;
@@ -30,6 +30,7 @@ namespace Projekt_Dieta.Models
             Fat = dish.Nutrition.NutriInfoFat();
             Carbohydrates = dish.Nutrition.NutriInfoCarbs();
             Ingrideints = dish.GetIngredients();
+            Date = date;
         }
     }
     

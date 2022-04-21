@@ -26,7 +26,7 @@ namespace Projekt_Dieta.Models
                 foreach (var item in this.Nutrients)
                 {
                     if (item.Name == "Calories" || item.Name == "Fat" || item.Name == "Carbohydrates")
-                    result += item.Name + " " + item.Amount.ToString() + item.Unit + " ";
+                    result += item.Name + " " + item.Amount.ToString() + item.Unit + " \n";
                 }
             }
             return result;

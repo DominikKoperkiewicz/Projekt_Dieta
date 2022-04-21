@@ -10,6 +10,7 @@ namespace Projekt_Dieta.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Image { get; set; }
         public string SpoonacularSourceUrl { get; set; }
         public string Instructions { get; set; }
         public NutrientsInfo Nutrition { get; set; }

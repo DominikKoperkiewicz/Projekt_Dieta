@@ -24,10 +24,12 @@
                 HorizontalAlignment="Left"
                 Margin="5"
                 Grid.Row="0"
-                Style="{StaticResource ModernTextbox}"/>
+                KeyDown="MenuView_EnterKeyDown"
+                x:Name="SearchBarTextBox"
+                />
             
 
-
+<!--
         <Grid Grid.Row="1">
             <ListBox Name="entryList" HorizontalAlignment="Stretch">
                 <ListBox.ItemTemplate>
@@ -39,6 +41,25 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
+-->
 
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
+                <DataGrid x:Name="DataGridXAML">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridRow">
+                            <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id, Mode=OneWay}" Width="100"/>
+                        <DataGridTextColumn Header="Dish Name" Binding="{Binding Title, Mode=OneWay}" Width="600"/>
+                       <!-- <DataGridTextColumn Header="Description" Binding="{Binding Instructions}" Width="600"/> -->
+                        <DataGridTextColumn Header="Add" Width="35"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </Grid>
+        
     </Grid>
 </Page>

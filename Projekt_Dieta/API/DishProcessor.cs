@@ -38,7 +38,7 @@ namespace Projekt_Dieta.API
         }
         public static async Task<DishSearchResults> LoadDishes(string query)
         {
-            string url = $"https://api.spoonacular.com/recipes/complexSearch?query={ query }&instructionsRequired=true&addRecipeNutrition=true&number=5&apiKey=ef70bb600b644411936f9c2ffc9bb265";
+            string url = $"https://api.spoonacular.com/recipes/complexSearch?query={ query }&instructionsRequired=true&addRecipeNutrition=true&number=10&apiKey=ef70bb600b644411936f9c2ffc9bb265";
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {

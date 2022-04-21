@@ -56,5 +56,11 @@ namespace Projekt_Dieta
         {
             ActiveItem.Content = new CalendarView();
         }
+
+        public void Go_To_DishView(int id)
+        {
+            DishView.DishID = id;
+            ActiveItem.Content = new DishView();
+        }
     }
 }
