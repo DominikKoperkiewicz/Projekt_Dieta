@@ -20,9 +20,30 @@ namespace Projekt_Dieta.Views
     /// </summary>
     public partial class CalendarView : Page
     {
+        DateTime fromDate;
+
         public CalendarView()
         {
             InitializeComponent();
+            fromDate = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+            LabelUpdate();
+        }
+
+        private void Previous_Button_Click(object sender, RoutedEventArgs e)
+        {
+            fromDate = fromDate.AddDays(-7);
+            LabelUpdate();
+        }
+
+        private void Next_Button_Click(object sender, RoutedEventArgs e)
+        {
+            fromDate = fromDate.AddDays(7);
+            LabelUpdate();
+        }
+
+        private void LabelUpdate()
+        {
+            labelDate.Content = fromDate.ToString("dd.MM.yyyy") + " - " + fromDate.AddDays(6).ToString("dd.MM.yyyy");
         }
     }
 }

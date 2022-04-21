@@ -23,10 +23,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
 
         </Grid.RowDefinitions>
 
@@ -71,6 +68,37 @@
                VerticalAlignment="Center"
                HorizontalAlignment="Center"
                Content="Sunday"/>
+
+        <Label Grid.Row="2" Grid.Column="2"
+               x:Name="labelDate"
+               Foreground="#FFF"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Content="From-To" Grid.ColumnSpan="4" Margin="114,4.4,11.6,0" Width="332"/>
+
+        <Button Width="70" Height="25"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Content="🢀"
+                            FontSize="15"
+                            FontWeight="Bold"
+                            Background="#3FA142"
+                            BorderThickness="0"
+                            Click="Previous_Button_Click"
+                            Foreground="White"
+                            Margin="0"/>
+
+        <Button Width="70" Height="25"
+                            Grid.Row="2"
+                            Grid.Column="6"
+                            Content="🢂"
+                            FontSize="15"
+                            FontWeight="Bold"
+                            Background="#3FA142"
+                            BorderThickness="0"
+                            Click="Next_Button_Click"
+                            Foreground="White"
+                            Margin="0"/>
 
     </Grid>
 </Page>

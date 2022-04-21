@@ -21,13 +21,13 @@ namespace Projekt_Dieta.API
         /// <exception cref="Exception"></exception>
         public static async Task<Dish> LoadDish(int dishID)
         {
-            string url = $"https://api.spoonacular.com/recipes/informationBulk?ids={ dishID }&includeNutrition=true&apiKey=ef70bb600b644411936f9c2ffc9bb265";
+            string url = $"https://api.spoonacular.com/recipes/informationBulk?ids={ dishID }&includeNutrition=true&apiKey=d052eb07d67643e7a5dacc44b470a0f6"; //ef70bb600b644411936f9c2ffc9bb265";
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    List<Dish> dishes = await response.Content.ReadAsAsync<List<Dish>>(); 
+                    List<Dish> dishes = await response.Content.ReadAsAsync<List<Dish>>();
                     return dishes.First();
                 }
                 else
@@ -38,7 +38,7 @@ namespace Projekt_Dieta.API
         }
         public static async Task<DishSearchResults> LoadDishes(string query)
         {
-            string url = $"https://api.spoonacular.com/recipes/complexSearch?query={ query }&instructionsRequired=true&addRecipeNutrition=true&number=10&apiKey=ef70bb600b644411936f9c2ffc9bb265";
+            string url = $"https://api.spoonacular.com/recipes/complexSearch?query={ query }&instructionsRequired=true&addRecipeNutrition=true&number=10&apiKey=d052eb07d67643e7a5dacc44b470a0f6"; //ef70bb600b644411936f9c2ffc9bb265";
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {

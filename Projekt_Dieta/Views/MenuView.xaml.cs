@@ -1,4 +1,5 @@
-﻿using Projekt_Dieta.API;
+﻿
+using Projekt_Dieta.API;
 using Projekt_Dieta.DataAccess;
 using Projekt_Dieta.Models;
 using System;
@@ -29,6 +30,12 @@ namespace Projekt_Dieta.Views
         public MenuView()
         {
             InitializeComponent();
+            /* USUNĄĆ*/
+            Dish tmp = new Dish();
+            tmp.Id = 213742;
+            tmp.Title = "Papa Pasta";
+            for(int i = 0; i < 10; i++)
+                DataGridXAML.Items.Add(tmp);
         }
 
         private async Task LoadDishes(string query)
@@ -55,17 +62,14 @@ namespace Projekt_Dieta.Views
                 LoadDishes(searchText);
             }
         }
-        
+
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
         {
             DataGridRow row = sender as DataGridRow;
-            // Some operations with this row
 
-            //ssageBox.Show(list[row.GetIndex()].Id);
-            //DishView.DishID = list[row.GetIndex()].Id;
             Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView(list[row.GetIndex()].Id);
         }
-        
+
     }
 
 }

@@ -35,8 +35,8 @@ namespace Projekt_Dieta.Views
         {
             var dish = await DishProcessor.LoadDish(dish_id);
 
-            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n" 
-                + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" + 
+            test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n"
+                + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" +
                 dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
         }
         private async Task LoadDishes(string query)
@@ -53,7 +53,7 @@ namespace Projekt_Dieta.Views
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             // Makes sure all the info gets loaded onto the page
-            await LoadDishes("Chicken broth");
+            //await LoadDishes("Chicken broth");
         }
     }
 }

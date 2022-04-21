@@ -10,14 +10,56 @@
       Background="#181818">
 
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
 
+        
+        <Border CornerRadius="25"
+                Background="#242424"
+                Width="400" Height="50"
+                Margin="20 0"
+                HorizontalAlignment="Left">
 
+            <Grid>
+                <Rectangle StrokeThickness="1"/>
+                <TextBox Margin="20 0 0 0"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         VerticalContentAlignment="Center"
+                         Padding="5"
+                         FontSize="16"
+                         Foreground="#CFCFCF"
+                         KeyDown="MenuView_EnterKeyDown"
+                         x:Name="SearchBarTextBox"/>
+
+                <TextBlock IsHitTestVisible="False"
+                                       Text="Search"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="20 0 0 0"
+                                       FontSize="16"
+                                       Foreground="DarkGray">
+
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=SearchBarTextBox}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+
+            </Grid>
+        </Border>
+
+<!--
         <TextBox Width="420"
                 Height="50"
                 VerticalContentAlignment="Center"
@@ -27,9 +69,9 @@
                 KeyDown="MenuView_EnterKeyDown"
                 x:Name="SearchBarTextBox"
                 />
-            
+-->
 
-<!--
+        <!--
         <Grid Grid.Row="1">
             <ListBox Name="entryList" HorizontalAlignment="Stretch">
                 <ListBox.ItemTemplate>
@@ -44,22 +86,31 @@
 -->
 
         <Grid Grid.Row="1">
-            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
-                <DataGrid x:Name="DataGridXAML">
-                    <DataGrid.Resources>
-                        <Style TargetType="DataGridRow">
-                            <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
-                        </Style>
-                    </DataGrid.Resources>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Binding="{Binding Id, Mode=OneWay}" Width="100"/>
-                        <DataGridTextColumn Header="Dish Name" Binding="{Binding Title, Mode=OneWay}" Width="600"/>
-                       <!-- <DataGridTextColumn Header="Description" Binding="{Binding Instructions}" Width="600"/> -->
-                        <DataGridTextColumn Header="Add" Width="35"/>
-                    </DataGrid.Columns>
+
+
+                <DataGrid x:Name="DataGridXAML"
+                          Foreground="White"
+                          FontSize="20"
+                          RowBackground="Transparent"
+                          HeadersVisibility="None"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          Margin="5"
+                          GridLinesVisibility="None">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Dish Name" Binding="{Binding Title, Mode=OneWay}" Width="*"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id, Mode=OneWay}" Width="77"/>
+                        </DataGrid.Columns>
+
+
                 </DataGrid>
-            </ScrollViewer>
         </Grid>
-        
+
+
     </Grid>
 </Page>
