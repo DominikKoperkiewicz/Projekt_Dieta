@@ -34,7 +34,7 @@ namespace Projekt_Dieta.Views
             {
                 foreach (var entry in context.Entries)
                 {
-                    test_label.Content += entry.Title + " \n";
+                    test_label.Content += entry.Title + " " + entry.Date.ToString() + " \n";
                 }
             }
         }

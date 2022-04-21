@@ -50,7 +50,7 @@
         <DatePicker
             Grid.Row="2" 
             Margin="476,6.6,80,-0.4" 
-            x:Name="datePicker"/>
+            x:Name="datePicker" SelectedDateFormat="Long"/>
 
         <Button Width="70" Height="25"
                             Grid.Row="2"
