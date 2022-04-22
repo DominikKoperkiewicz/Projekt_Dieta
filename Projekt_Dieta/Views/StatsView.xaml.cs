@@ -67,6 +67,9 @@ namespace Projekt_Dieta.Views
             TitleLabel.Content = fromDate.ToString("dd.MM.yyyy") + " - " + fromDate.AddDays(6).ToString("dd.MM.yyyy");
         }
 
+        /// <summary>
+        /// Loads nutrients from current week and displays them on the stats view.
+        /// </summary>
         private void LoadWeeklyNutrients()
         {
             float Proteins = 0;
