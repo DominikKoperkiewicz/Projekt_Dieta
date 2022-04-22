@@ -1,4 +1,5 @@
 ﻿using Projekt_Dieta.DataAccess;
+using Projekt_Dieta.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Projekt_Dieta.Views
     {
         DateTime fromDate;
         DateTime toDate;
-        List<Label> labels = new List<Label>();
+
 
         public CalendarView()
         {
@@ -31,33 +32,28 @@ namespace Projekt_Dieta.Views
             fromDate = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
             toDate = fromDate.AddDays(6);
             LabelUpdate();
-            LoadCurrentWeeksMenu();
+            GenerateEntryBlocks();
         }
+
 
         private void Previous_Button_Click(object sender, RoutedEventArgs e)
         {
             fromDate = fromDate.AddDays(-7);
             toDate = toDate.AddDays(-7);
-            foreach (Label label in labels)
-            {
-                WeeksGrid.Children.Remove(label);
-            }
-            labels.Clear();
+
+            RemoveAll();
             LabelUpdate();
-            LoadCurrentWeeksMenu();
+            GenerateEntryBlocks();
         }
 
         private void Next_Button_Click(object sender, RoutedEventArgs e)
         {
             fromDate = fromDate.AddDays(7);
             toDate = toDate.AddDays(7);
-            foreach (Label label in labels)
-            {
-                WeeksGrid.Children.Remove(label);
-            }
-            labels.Clear();
+
+            RemoveAll();
             LabelUpdate();
-            LoadCurrentWeeksMenu();
+            GenerateEntryBlocks();
         }
 
         private void LabelUpdate()
@@ -67,23 +63,83 @@ namespace Projekt_Dieta.Views
 
         private void LoadCurrentWeeksMenu()
         {
-            DateTime test_date = fromDate.AddDays(1);
+            StackPanel[] Palens = new StackPanel[] { mondayStack, tuesdayStack, wenesdayStack, thursdayStack, fridayStack, saturdayStack, sundayStack };
             int[] Weeks = new int[7];
+           
             using (var context = new EntriesContext())
             {
                 var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
                 foreach (var entry in query)
                 {
+
                     Label label = new Label();
                     label.SetValue(Grid.ColumnProperty, (int)entry.Date.DayOfWeek); // dayofweek 0 - niedziela, trzeba to dopracowac bo zamienia poniedzialek z niedzielą
                     label.SetValue(Grid.RowProperty, 1+Weeks[(int)entry.Date.DayOfWeek]);
                     label.Content = entry.Title;
-                    WeeksGrid.Children.Add(label);
-                    labels.Add(label);
+                    //labels.Add(label);
                     Weeks[(int)entry.Date.DayOfWeek]++;
                 }
             }
         }
-        
+
+        private void GenerateEntryBlocks()
+        {
+            StackPanel[] Panels = new StackPanel[] { sundayStack, mondayStack, tuesdayStack, wenesdayStack, thursdayStack, fridayStack, saturdayStack };
+            int[] Weeks = new int[7];
+            int i = 0;
+
+            using (var context = new EntriesContext())
+            {
+                var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
+
+                foreach (var entry in query)
+                {
+                    Button remove = new Button();
+                    Button check = new Button();
+                    TextBlock textblock = new TextBlock();
+
+                    textblock.Text = entry.Title;
+
+                    remove.Style = Resources["removeButton"] as Style;
+                    check.Style = Resources["checkButton"] as Style;
+
+                    remove.AddHandler(Button.ClickEvent, new RoutedEventHandler(Remove_Button_Click));
+
+                    DockPanel dock = new DockPanel();
+                    dock.Children.Add(textblock);
+                    dock.Children.Add(remove);
+                    dock.Children.Add(check);
+
+                    i = (int)entry.Date.DayOfWeek;
+                    Panels[i].Children.Add(dock);
+                }
+            }
+
+
+        }
+        private void Remove_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button srcButton = e.Source as Button;
+            var parent = (UIElement)srcButton.Parent;
+            parent.Visibility = Visibility.Collapsed;
+        }
+
+        private void Check_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView();
+        }
+
+        private void RemoveAll()
+        {
+            mondayStack.Children.Clear();
+            tuesdayStack.Children.Clear();
+            wenesdayStack.Children.Clear();
+            thursdayStack.Children.Clear();
+            fridayStack.Children.Clear();
+            saturdayStack.Children.Clear();
+            sundayStack.Children.Clear();
+        }
+
+
     }
 }

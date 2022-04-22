@@ -9,8 +9,57 @@
       Title="CalendarView"
       Background="#181818">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Style TargetType="{x:Type DockPanel}">
+                        <Setter Property="Background" Value="#3FA142"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Top"></Setter>
+                        <Setter Property="Margin" Value="1"></Setter>
+                        <Setter Property="Height" Value="40"></Setter>
+                    </Style>
 
-    <Grid x:Name="WeeksGrid">
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="Padding" Value="3 0"></Setter>
+                        <Setter Property="Height" Value="17"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Top"></Setter>
+                        <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+                    </Style>
+
+
+                    <Style x:Key="checkButton" TargetType="Button">
+                        <Setter Property="Height" Value="20"></Setter>
+                        <Setter Property="Width" Value="50"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+                        <Setter Property="Background" Value="#FF4E63FF"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="Content" Value="CHECK"></Setter>
+                    </Style>
+
+                    <Style x:Key="removeButton" TargetType="{x:Type Button}">
+                        <Setter Property="Height" Value="20"></Setter>
+                        <Setter Property="Width" Value="20"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+                        <Setter Property="Background" Value="#FFE70000"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="Content" Value="✖"></Setter>
+                        <!--<EventSetter Event="Click" Handler="Remove_Button_Click"/>-->
+                    </Style>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -23,15 +72,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
 
         </Grid.RowDefinitions>
-        
-        <!-- Row 0 -->
+
         <Label Grid.Row="0" Grid.Column="0"
                Foreground="#FFF"
                VerticalAlignment="Center"
@@ -74,10 +118,7 @@
                HorizontalAlignment="Center"
                Content="Sunday"/>
 
-
-
-        <!-- Row 6 -->
-        <Label Grid.Row="6" Grid.Column="2"
+        <Label Grid.Row="2" Grid.Column="2"
                x:Name="labelDate"
                Foreground="#FFF"
                VerticalAlignment="Center"
@@ -85,7 +126,7 @@
                Content="From-To" Grid.ColumnSpan="4" Margin="114,4.4,11.6,0" Width="332"/>
 
         <Button Width="70" Height="25"
-                            Grid.Row="6"
+                            Grid.Row="2"
                             Grid.Column="0"
                             Content="🢀"
                             FontSize="15"
@@ -97,7 +138,7 @@
                             Margin="0"/>
 
         <Button Width="70" Height="25"
-                            Grid.Row="6"
+                            Grid.Row="2"
                             Grid.Column="6"
                             Content="🢂"
                             FontSize="15"
@@ -107,6 +148,34 @@
                             Click="Next_Button_Click"
                             Foreground="White"
                             Margin="0"/>
+        <!--
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Background="#3FA142"
+                   Foreground="White"
+                   Margin="2"
+                   Height="40"
+                   VerticalAlignment="Top"
+                   Padding="3 0">
+            Pierogi
+        </TextBlock>
+        -->
+
+        <StackPanel Grid.Row="1" Grid.Column="0" x:Name="mondayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="tuesdayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" x:Name="wenesdayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" x:Name="thursdayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="4" x:Name="fridayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="5" x:Name="saturdayStack"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="6" x:Name="sundayStack"/>
+
 
     </Grid>
+
 </Page>
