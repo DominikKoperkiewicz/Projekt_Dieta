@@ -103,7 +103,7 @@ namespace Projekt_Dieta.Views
                 };
                 check.Click += (s, e) =>
                 {
-                    Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView(entry.Id);
+                    Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView(entry.DishID);
                 };
 
                 DockPanel dock = new DockPanel();
@@ -137,7 +137,5 @@ namespace Projekt_Dieta.Views
             saturdayStack.Children.Clear();
             sundayStack.Children.Clear();
         }
-
-
     }
 }

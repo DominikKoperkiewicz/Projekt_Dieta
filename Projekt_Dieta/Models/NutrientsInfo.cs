@@ -27,6 +27,8 @@ namespace Projekt_Dieta.Models
                 {
                     if (item.Name == "Calories")
                         result += item.Amount.ToString() + item.Unit + " ";
+                    if (item.Name == "Protein")
+                        result += item.Amount.ToString() + item.Unit + " Proteins ";
                     if (item.Name == "Fat")
                         result += item.Amount.ToString() + item.Unit + " Fat ";
                     if (item.Name == "Carbohydrates")
@@ -44,9 +46,8 @@ namespace Projekt_Dieta.Models
                 result = String.Empty;
                 foreach (var item in this.Nutrients)
                 {
-                    if (item.Name == "Calories" || item.Name == "Fat" || item.Name == "Carbohydrates")
+                    if (item.Name == "Calories" || item.Name == "Fat" || item.Name == "Carbohydrates" || item.Name == "Proteins")
                         result +=item.Name + " " + item.Amount.ToString() + item.Unit + " ";
-
                 }
             }
             return result;
@@ -79,6 +80,16 @@ namespace Projekt_Dieta.Models
         public float NutriInfoCarbs()
         {
             float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Carbohydrates").Amount;
+
+            return result;
+        }
+        /// <summary>
+        /// Retrieves proteins
+        /// </summary>
+        /// <returns></returns>
+        public float NutriInfoProteins()
+        {
+            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Proteins").Amount;
 
             return result;
         }
