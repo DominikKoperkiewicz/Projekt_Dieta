@@ -173,7 +173,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\CalendarIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatsIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
