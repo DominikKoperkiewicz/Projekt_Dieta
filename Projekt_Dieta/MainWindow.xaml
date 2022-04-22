@@ -33,18 +33,29 @@
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <Image Source="Images/MenuIcon.png" Grid.Column="0" Height="32" VerticalAlignment="Top" Margin="0 3"></Image>
+                <Image Source="Images/StatsIcon.png" Grid.Column="1" Height="32" VerticalAlignment="Top" Margin="0 3"></Image>
+                <Image Source="Images/CalendarIcon.png" Grid.Column="2" Height="32" VerticalAlignment="Top" Margin="0 3"></Image>
+
                 <Button Content="Menu" Grid.Column="0" Click="Menu_Button_Click"
                             Background="Transparent"
                             BorderThickness="0"
-                            Foreground="#3FA142"/>
+                            FontWeight="Bold"
+                            Foreground="#3FA142"
+                            VerticalContentAlignment="Bottom"/>
                 <Button Content="Stats" Grid.Column="1" Click="Stats_Button_Click"
                             Background="Transparent"
                             BorderThickness="0"
-                            Foreground="#3FA142"/>
+                            FontWeight="Bold"
+                            Foreground="#3FA142"
+                            VerticalContentAlignment="Bottom"/>
                 <Button Content="Calendar" Grid.Column="2" Click="Calendar_Button_Click"
                             Background="Transparent"
                             BorderThickness="0"
-                            Foreground="#3FA142"/>
+                            FontWeight="Bold"
+                            Foreground="#3FA142"
+                            VerticalContentAlignment="Bottom"/>
 
             </Grid>
             <StackPanel Grid.Column="3"
