@@ -79,12 +79,12 @@
                        Text="Calories" 
                        FontSize="20" Foreground="#3FA142" 
                        Margin="352,95,0,0" Grid.Column="1"/>
-            <Label x:Name="CaloriesLabel" Grid.Column="1" Content="32134333" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Foreground="Green" FontSize="26" HorizontalContentAlignment="Center"/>
+            <Label x:Name="CaloriesLabel" Grid.Column="1" Content="32134333" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Foreground="#3FA142" FontSize="26" HorizontalContentAlignment="Center"/>
 
             <Ellipse HorizontalAlignment="Center" 
                      Height="109" 
                      Margin="0,171,0,0" 
-                     Stroke="Blue" 
+                     Stroke="#3a76bd" 
                      StrokeThickness="6" 
                      VerticalAlignment="Top" 
                      Width="108" 
@@ -92,32 +92,32 @@
             <TextBlock HorizontalAlignment="Left" 
                        VerticalAlignment="Top" 
                        Text="Carbs" 
-                       FontSize="15" Foreground="Blue" 
+                       FontSize="15" Foreground="#3a76bd" 
                        Margin="368,243,0,0" Grid.Column="1"/>
-            <Label x:Name="CarbsLabel" Grid.Column="1" Content="23234" HorizontalAlignment="Center" Margin="0,206,0,0" VerticalAlignment="Top" Foreground="Blue" FontSize="20" HorizontalContentAlignment="Center"/>
+            <Label x:Name="CarbsLabel" Grid.Column="1" Content="23234" HorizontalAlignment="Center" Margin="0,206,0,0" VerticalAlignment="Top" Foreground="#3a76bd" FontSize="20" HorizontalContentAlignment="Center"/>
 
             <Ellipse HorizontalAlignment="Left"
                      Height="110" Margin="190,108,0,0" 
-                     Stroke="Red" StrokeThickness="6" 
+                     Stroke="#bd3a3a" StrokeThickness="6" 
                      VerticalAlignment="Top" Width="110" 
                      Grid.Column="1"/>
             <TextBlock HorizontalAlignment="Left" 
                        VerticalAlignment="Top" 
                        Text="Fat" 
-                       FontSize="20" Foreground="Red" 
-                       Margin="231,184,0,0" Grid.Column="1"/>
-            <Label x:Name="FatLabel" Grid.Column="1" Content="100" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="223,142,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="20"/>
+                       FontSize="15" Foreground="#bd3a3a" 
+                       Margin="232.8,181,0,0" Grid.Column="1" Width="23"/>
+            <Label x:Name="FatLabel" Grid.Column="1" Content="1000" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="195.8,142,483,0" VerticalAlignment="Top" Foreground="#bd3a3a" FontSize="20" Width="98"/>
 
             <Ellipse HorizontalAlignment="Left" Height="110"
-                     Margin="475,108,0,0" Stroke="Yellow" 
+                     Margin="475,108,0,0" Stroke="#bddd4e" 
                      StrokeThickness="6" VerticalAlignment="Top"
                      Width="109" Grid.Column="1"/>
             <TextBlock HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Text="Proteins" 
-                FontSize="15" Foreground="Yellow" 
+                FontSize="15" Foreground="#bddd4e" 
                 Margin="503,181,0,0" Grid.Column="1"/>
-            <Label x:Name="ProteinLabel" Grid.Column="1" Content="100" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="509,142,0,0" VerticalAlignment="Top" Foreground="Yellow" FontSize="20"/>
+            <Label x:Name="ProteinLabel" Grid.Column="1" Content="100" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="474.8,142,193,0" VerticalAlignment="Top" Foreground="#bddd4e" FontSize="20" Width="109"/>
         </Grid>
     </Grid>
 
