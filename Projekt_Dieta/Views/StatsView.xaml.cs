@@ -22,50 +22,72 @@ namespace Projekt_Dieta.Views
     /// </summary>
     public partial class StatsView : Page
     {
+        DateTime fromDate;
+        DateTime toDate;
         public StatsView()
         {
+            fromDate = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+            toDate = fromDate.AddDays(6);
             InitializeComponent();
-            test();
-            
+            LabelUpdate();
+            LoadWeeklyNutrients();
         }
-        private void test()
+
+        /// <summary>
+        /// Changes displayed date.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Previous_Button_Click(object sender, RoutedEventArgs e)
         {
+            fromDate = fromDate.AddDays(-7);
+            toDate = toDate.AddDays(-7);
+            LabelUpdate();
+            LoadWeeklyNutrients();
+        }
+
+        /// <summary>
+        /// Changes displayed date.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Next_Button_Click(object sender, RoutedEventArgs e)
+        {
+            fromDate = fromDate.AddDays(7);
+            toDate = toDate.AddDays(7);
+            LabelUpdate();
+            LoadWeeklyNutrients();
+        }
+
+        /// <summary>
+        /// Updates displayed date
+        /// </summary>
+        private void LabelUpdate()
+        {
+            TitleLabel.Content = fromDate.ToString("dd.MM.yyyy") + " - " + fromDate.AddDays(6).ToString("dd.MM.yyyy");
+        }
+
+        private void LoadWeeklyNutrients()
+        {
+            float Proteins = 0;
+            float Fat = 0;
+            float Carbs = 0;
+            float Calories = 0;
             using (var context = new EntriesContext())
             {
-                foreach (var entry in context.Entries)
+                var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
+                foreach (var entry in query)
                 {
-                    test_label.Content += entry.Title + " " + entry.Date.ToString() + " \n";
+                    Proteins += entry.Protein;
+                    Fat += entry.Fat;
+                    Carbs += entry.Carbohydrates;
+                    Calories += entry.Calories;
                 }
             }
+            CaloriesLabel.Content = Calories.ToString();
+            FatLabel.Content = Fat.ToString();
+            CarbsLabel.Content = Carbs.ToString();
+            ProteinLabel.Content = Proteins.ToString();
         }
-        /// <summary>
-        /// Loads dish using it's id and displays it in a test label
-        /// </summary>
-        /// <param name="dish_id"></param> dish ID used by api
-        /// <returns></returns>
-        //private async Task LoadDish(int dish_id)
-        //{
-        //    var dish = await DishProcessor.LoadDish(dish_id);
-
-        //    test_label.Content = dish.Title + " " + dish.Nutrition.NutriInfoString() + "\n"
-        //        + dish.SpoonacularSourceUrl + "\n" + dish.Instructions + "\n" +
-        //        dish.ExtendedIngredients.First().Original + "\n" + dish.GetIngredients();
-        //}
-        //private async Task LoadDishes(string query)
-        //{
-        //    var dish = await DishProcessor.LoadDishes(query);
-
-        //    foreach (var item in dish.Results)
-        //    {
-        //        test_label.Content += item.Title + "\n";
-        //    }
-        //}
-
-
-        //private async void Page_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    // Makes sure all the info gets loaded onto the page
-        //    //await LoadDishes("Chicken broth");
-        //}
     }
 }
