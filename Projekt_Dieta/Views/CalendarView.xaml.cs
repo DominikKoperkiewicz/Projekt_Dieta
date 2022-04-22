@@ -36,7 +36,11 @@ namespace Projekt_Dieta.Views
             GenerateEntryBlocks();
         }
 
-
+        /// <summary>
+        /// Changes displayed date, clears all blocks and generates new ones for previous week.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Previous_Button_Click(object sender, RoutedEventArgs e)
         {
             fromDate = fromDate.AddDays(-7);
@@ -47,6 +51,11 @@ namespace Projekt_Dieta.Views
             GenerateEntryBlocks();
         }
 
+        /// <summary>
+        /// Changes displayed date, clears all blocks and generates new ones for next week.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Next_Button_Click(object sender, RoutedEventArgs e)
         {
             fromDate = fromDate.AddDays(7);
@@ -57,83 +66,65 @@ namespace Projekt_Dieta.Views
             GenerateEntryBlocks();
         }
 
+        /// <summary>
+        /// Updates displayed date
+        /// </summary>
         private void LabelUpdate()
         {
             labelDate.Content = fromDate.ToString("dd.MM.yyyy") + " - " + fromDate.AddDays(6).ToString("dd.MM.yyyy");
         }
 
-        private void LoadCurrentWeeksMenu()
-        {
-            StackPanel[] Palens = new StackPanel[] { mondayStack, tuesdayStack, wenesdayStack, thursdayStack, fridayStack, saturdayStack, sundayStack };
-            int[] Weeks = new int[7];
-           
-            using (var context = new EntriesContext())
-            {
-                var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
-                foreach (var entry in query)
-                {
-
-                    Label label = new Label();
-                    label.SetValue(Grid.ColumnProperty, (int)entry.Date.DayOfWeek); // dayofweek 0 - niedziela, trzeba to dopracowac bo zamienia poniedzialek z niedzielą
-                    label.SetValue(Grid.RowProperty, 1+Weeks[(int)entry.Date.DayOfWeek]);
-                    label.Content = entry.Title;
-                    //labels.Add(label);
-                    Weeks[(int)entry.Date.DayOfWeek]++;
-                }
-            }
-        }
-
+        /// <summary>
+        /// Generates all entries blocks for current week based on database context
+        /// </summary>
         private void GenerateEntryBlocks()
         {
             StackPanel[] Panels = new StackPanel[] { sundayStack, mondayStack, tuesdayStack, wenesdayStack, thursdayStack, fridayStack, saturdayStack };
-            int[] Weeks = new int[7];
             int i = 0;
 
+            var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
 
-            
-                var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
+            foreach (var entry in query)
+            {
+                Button remove = new Button();
+                Button check = new Button();
+                TextBlock textblock = new TextBlock();
 
-                foreach (var entry in query)
+                textblock.Text = entry.Title;
+
+                remove.Style = Resources["removeButton"] as Style;
+                check.Style = Resources["checkButton"] as Style;
+
+                remove.Click += (s, e) =>
                 {
-                    Button remove = new Button();
-                    Button check = new Button();
-                    TextBlock textblock = new TextBlock();
+                    Remove_Button_Click(s, e);
+                    context.Entries.Remove(entry);
+                    context.SaveChanges();
+                };
+                check.Click += (s, e) =>
+                {
+                    Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView(entry.Id);
+                };
 
-                    textblock.Text = entry.Title;
+                DockPanel dock = new DockPanel();
+                dock.Children.Add(textblock);
+                dock.Children.Add(remove);
+                dock.Children.Add(check);
 
-                    remove.Style = Resources["removeButton"] as Style;
-                    check.Style = Resources["checkButton"] as Style;
-
-                    remove.Click += (s, e) => 
-                    {
-                        Remove_Button_Click(s, e);
-                        context.Entries.Remove(entry);
-                        context.SaveChanges();
-                    };
-
-
-                    DockPanel dock = new DockPanel();
-                    dock.Children.Add(textblock);
-                    dock.Children.Add(remove);
-                    dock.Children.Add(check);
-
-                    i = (int)entry.Date.DayOfWeek;
-                    Panels[i].Children.Add(dock);
-                }
-            
-
-
+                i = (int)entry.Date.DayOfWeek;
+                Panels[i].Children.Add(dock);
+            }
         }
+        /// <summary>
+        /// Removes deleted blocks
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
             Button srcButton = e.Source as Button;
             var parent = (UIElement)srcButton.Parent;
             parent.Visibility = Visibility.Collapsed;
-        }
-
-        private void Check_Button_Click(object sender, RoutedEventArgs e)
-        {
-            //Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Go_To_DishView();
         }
 
         private void RemoveAll()
