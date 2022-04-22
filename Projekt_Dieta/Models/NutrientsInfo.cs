@@ -89,7 +89,8 @@ namespace Projekt_Dieta.Models
         /// <returns></returns>
         public float NutriInfoProteins()
         {
-            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Proteins").Amount;
+            
+            float result = this.Nutrients.Find(Nutrients => Nutrients.Name == "Protein").Amount;
 
             return result;
         }

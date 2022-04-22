@@ -43,8 +43,9 @@ namespace Projekt_Dieta.Views
         {
             titleLabel.Content = currentDish.Title;
             img.Source = new BitmapImage(new Uri(currentDish.Image));
-            txtBlock.Text = currentDish.Instructions;
+            txtBlock.Text = "URL: " + currentDish.SpoonacularSourceUrl+ "\n" + currentDish.Instructions;
             txtNutrients.Text = currentDish.Nutrition.NutriInfoStringLong();
+            NutrientsLabel.Content = $"Nutrients in {currentDish.Servings} servings";
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)

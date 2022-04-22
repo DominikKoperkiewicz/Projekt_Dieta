@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
+            <RowDefinition Height="280"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
@@ -19,7 +19,7 @@
                Grid.Row="0"
                Foreground="White"
                FontSize="30"
-               Margin="10"
+               Margin="10,0,10,20"
                FontWeight="Bold">
             Title
         </Label>
@@ -27,25 +27,26 @@
                 Grid.Row="0"
                 Stretch="Uniform"
                 Source="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png" 
-                Margin="0,64,593,9.6"/>
+                Margin="9,54,583,20"/>
 
         <TextBlock x:Name="txtBlock"
                    Grid.Row="0"
-                   Foreground="White" Margin="212,64,46,9.6"
+                   Foreground="White" Margin="224,59,10,0"
                    TextWrapping="Wrap">
             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
         </TextBlock>
 
-        <Label Foreground="White"
+        <Label x:Name="NutrientsLabel"
+               Foreground="White"
                Grid.Row="1"
                FontSize="22"
                FontWeight="Bold"
-               Margin="0">Nutrients</Label>
+               Margin="10,0,-10,0">Nutrients</Label>
 
         <TextBlock Foreground="White"
                    x:Name="txtNutrients"
                    Grid.Row="1" 
-                   Margin="10,47.4,490,15.6">Calories</TextBlock>
+                   Margin="10,43,481,20">Calories</TextBlock>
 
         <DatePicker
             Grid.Row="2" 
