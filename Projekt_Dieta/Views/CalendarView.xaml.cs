@@ -25,6 +25,7 @@ namespace Projekt_Dieta.Views
         DateTime fromDate;
         DateTime toDate;
 
+        EntriesContext context = new EntriesContext();
 
         public CalendarView()
         {
@@ -88,8 +89,8 @@ namespace Projekt_Dieta.Views
             int[] Weeks = new int[7];
             int i = 0;
 
-            using (var context = new EntriesContext())
-            {
+
+            
                 var query = context.Entries.Where(e => e.Date >= fromDate).Where(e => e.Date <= toDate);
 
                 foreach (var entry in query)
@@ -103,7 +104,13 @@ namespace Projekt_Dieta.Views
                     remove.Style = Resources["removeButton"] as Style;
                     check.Style = Resources["checkButton"] as Style;
 
-                    remove.AddHandler(Button.ClickEvent, new RoutedEventHandler(Remove_Button_Click));
+                    remove.Click += (s, e) => 
+                    {
+                        Remove_Button_Click(s, e);
+                        context.Entries.Remove(entry);
+                        context.SaveChanges();
+                    };
+
 
                     DockPanel dock = new DockPanel();
                     dock.Children.Add(textblock);
@@ -113,7 +120,7 @@ namespace Projekt_Dieta.Views
                     i = (int)entry.Date.DayOfWeek;
                     Panels[i].Children.Add(dock);
                 }
-            }
+            
 
 
         }
