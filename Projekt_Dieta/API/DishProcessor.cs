@@ -36,6 +36,13 @@ namespace Projekt_Dieta.API
                 }
             }
         }
+
+        /// <summary>
+        /// Loads dish info to a dish class.
+        /// </summary>
+        /// <param name="dishID"></param> id used by api to fetch all informations
+        /// <returns>Dish class filled with all necessary informations</returns>
+        /// <exception cref="Exception"></exception>
         public static async Task<DishSearchResults> LoadDishes(string query)
         {
             string url = $"https://api.spoonacular.com/recipes/complexSearch?query={ query }&instructionsRequired=true&addRecipeNutrition=true&number=10&apiKey=d052eb07d67643e7a5dacc44b470a0f6"; //ef70bb600b644411936f9c2ffc9bb265";

@@ -4,12 +4,336 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.API.ApiHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.API.ApiHelper.html",
+          "hash": "m4MBSpuZhlP8XoBsFM8U6vnEPRkyGfeey5H/pfmS+NE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.API.DishProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.API.DishProcessor.html",
+          "hash": "rfYLB3wIMdeJ1V3nk181adpId6nnLZAq5rwy7jDDd0w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.API.html",
+          "hash": "KLK6W+JX5VU7CKvkpGwS5RiXFGWY8o7gfmfpvv7ekEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.App.html",
+          "hash": "9TLGVQz/6RRI4VY+IXFfIHgkgYI9l1WCS4qnj0/e2F8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.DataAccess.EntriesContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.DataAccess.EntriesContext.html",
+          "hash": "0Q0m0kdpdWk2/y8Jx2sMACg7NudSK1E8S9CVDqh2FsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.DataAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.DataAccess.html",
+          "hash": "dqrT5/xVyPoyE7Rs4aEe+RjMXEhvvNc4OGkYLp+vG5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.MainWindow.html",
+          "hash": "EoAaYVISSWjJhqfVdrDd6JO+CA56lTsZ9ZHFbFfYWxs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Migrations.InitialCreate.html",
+          "hash": "yh9uXKxESW6BoM4ysPRQwm0ZlfVpGZ+M7v8ZIKHqsPM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Migrations.Servings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Migrations.Servings.html",
+          "hash": "WZT74mvV42gTANsEbNtzT0YOvJHoC3Rew76ZwRqnxFQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Migrations.proteins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Migrations.proteins.html",
+          "hash": "VlqBagOUDvBJn1y6IWlgnDQCUEsCvycoT8Xo7l6wSq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Migrations.test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Migrations.test.html",
+          "hash": "RC+V8Tr8LINIHF02MTXEe+ZHTCrwxxDgcT5mEuyq8no="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Migrations.html",
+          "hash": "CDobgBYf4rMC2AEdQoPgcOZxsvIMQ/W4R4Y9XxmMvrk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.Dish.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.Dish.html",
+          "hash": "fSP76a5Yhx0tgTbj8lpqj3jUfKGDfSc77Ad7NrRiZ70="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.DishSearchResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.DishSearchResult.html",
+          "hash": "OWfLCLur8KLeBQ7UR6e5GtlnjC9JwNCEZrIoqgZ8HUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.DishSearchResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.DishSearchResults.html",
+          "hash": "YWoxXUNO4YE002NBRJyAaQXoXDECvguSm+OnjNA7Kc4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.Entry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.Entry.html",
+          "hash": "5wH5+WXRIs+wc9lBRlcQ9nxZAvMYpcav5raTABu/8vc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.Ingredient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.Ingredient.html",
+          "hash": "ipuHt3rEZMF3+RQJIsCYq+2T3dFd0LEuZqIbW4NHYzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.NutrientsClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.NutrientsClass.html",
+          "hash": "F1j2DRp/q+upnLd2nqng4Ed1e14nxmTkbzz1fczg2To="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.NutrientsInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.NutrientsInfo.html",
+          "hash": "lrbmakjnXIQX5UbUyAyqo0KbUq9ctSji7U07Lz3Blxc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Models.html",
+          "hash": "43P5RydFkT2HBTFpnM08LCigdfNJqfwIMrIAG6R8K9Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Views.CalendarView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Views.CalendarView.html",
+          "hash": "JVkYNFzjts/1OgwHEZcgFt245wX6GnniPu3PeBB1jnQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Views.DishView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Views.DishView.html",
+          "hash": "nxYO5ilwtPHwudlb2PGqbP3JrxHG4S3TroEIiNZ4zEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Views.MenuView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Views.MenuView.html",
+          "hash": "1f96BK+GIyca5b1xIfRBnUf8YRUD0hG2Bzc0VlBxfzQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Views.StatsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Views.StatsView.html",
+          "hash": "eknanab7dO6dHWYz1aRugFG0Js98SViuZpaJ2oeWbLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.Views.html",
+          "hash": "CY+nR9SIrPf84XgOUK3HqdYMUz91STWrmysMjdhFL/o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "API/Projekt_Dieta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/Projekt_Dieta.html",
+          "hash": "PrGTl08J2AAwbW6BJ+eFeOwoMR0BFVk9VtAOH2JdM6U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "API/index.md",
       "output": {
         ".html": {
           "relative_path": "API/index.html",
-          "hash": "F204HsbW49GtHFnfKAgsR56+2WP9mYbEU+ZVW1xIYho="
+          "hash": "DyjCRFAJb5xpOInHJ8so27GKuKl87iCOwVX6piHA2Mk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "API/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "API/toc.html",
+          "hash": "elQFPm9sL1IhhwccDjInFvBYCY47AMV63/RFteDf7Wk="
         }
       },
       "is_incremental": false,
@@ -54,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "6Ga4h2moHjy2O4yxwJxF2FO8KM2ZmNqw8+VtIJ5GBr0="
+          "hash": "aOy2sep6UZV26oOkupcIBXuDgHQsCVz7R3i+I6vFl6Y="
         }
       },
       "is_incremental": false,
@@ -62,7 +386,7 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/toc.md",
+      "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
@@ -78,307 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VppMFMFpV1CxY0Zfg+cwpjAFBZPAvchx2+sPEua5w8g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.API.ApiHelper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.API.ApiHelper.html",
-          "hash": "812ndeK0kZlIeaRlZhwTVmZ6ZnAfaOwAfVzvVrZx+bo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.API.DishProcessor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.API.DishProcessor.html",
-          "hash": "1q5c6h2pxVSkOTueB73a921xwZ6PsTf7ypC7O0mhimw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.API.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.API.html",
-          "hash": "8DrY7ze8VqMBzepLTgKTxXeAsq1fmN97XOvERGgPlLc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.App.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.App.html",
-          "hash": "BtHTVawpTzOAGBIm48lbPveZ8QGFLAzbv/Q75y3aEOc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.DataAccess.EntriesContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.DataAccess.EntriesContext.html",
-          "hash": "0Q0m0kdpdWk2/y8Jx2sMACg7NudSK1E8S9CVDqh2FsU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.DataAccess.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.DataAccess.html",
-          "hash": "dqrT5/xVyPoyE7Rs4aEe+RjMXEhvvNc4OGkYLp+vG5I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.MainWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.MainWindow.html",
-          "hash": "NMEfXO72x5SR16SkXSf9FnvjP89PqI9+2PntusNvONE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Migrations.InitialCreate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Migrations.InitialCreate.html",
-          "hash": "yh9uXKxESW6BoM4ysPRQwm0ZlfVpGZ+M7v8ZIKHqsPM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Migrations.test.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Migrations.test.html",
-          "hash": "RC+V8Tr8LINIHF02MTXEe+ZHTCrwxxDgcT5mEuyq8no="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Migrations.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Migrations.html",
-          "hash": "NFm4ZCzJmUS0el6iMMDEFvQpOiqUaNWIvcG/O3py07Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.Dish.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.Dish.html",
-          "hash": "2hxBLrLrhS2oS+hwDVlfrSpjRQufKZNDRw0Dv+W6bGk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.DishSearchResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.DishSearchResult.html",
-          "hash": "OWfLCLur8KLeBQ7UR6e5GtlnjC9JwNCEZrIoqgZ8HUk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.DishSearchResults.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.DishSearchResults.html",
-          "hash": "YWoxXUNO4YE002NBRJyAaQXoXDECvguSm+OnjNA7Kc4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.Entry.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.Entry.html",
-          "hash": "Gh83UNjfLRvtbQCxL02IlXBjNAf7W+EkO1NVErCc51c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.Ingredient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.Ingredient.html",
-          "hash": "ipuHt3rEZMF3+RQJIsCYq+2T3dFd0LEuZqIbW4NHYzw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.NutrientsClass.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.NutrientsClass.html",
-          "hash": "2xdQrn1cH8f+HbFHmjI5UgcVfBfrDovYUNaahgJfpg4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.NutrientsInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.NutrientsInfo.html",
-          "hash": "gCTmfohaVniOtCIpvcNuo4LBDpCg/QX+bwKXoZCD1NQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Models.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Models.html",
-          "hash": "gO7fAoCSnTB/iD7XqqQzbOYXmezmgPZlaVJBh5bkjYQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Views.CalendarView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Views.CalendarView.html",
-          "hash": "JgP480F6Cu6V9qcb0e62IL50VZ0BFk8iSpjCYK1+j48="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Views.DishView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Views.DishView.html",
-          "hash": "qP6niD0NARPSvdvZBhzQd411AOuCGT7TJvkizvxFzX8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Views.MenuView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Views.MenuView.html",
-          "hash": "C55koBLpZFWRJUe1y0nWaEAEQRI/78JeTNC0h7K6/Ek="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Views.StatsView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Views.StatsView.html",
-          "hash": "81dGHiK1P+sOB51xZgAyIdGgbWju7siXgrnsv31Zl2Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.Views.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.Views.html",
-          "hash": "ryR5Z3kEzVkJrI2BIj4sPL0naF/HxdwMqMNAwJvdnWY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Projekt_Dieta.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Projekt_Dieta.html",
-          "hash": "Lxsbx3tuZ7O5cf59bX2X3bCS19NFIS8f3DTXC8vKwoc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "obj/api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "OYFOjVXKCYnY8Dg4ERD2iVMc0n12DdJgMpLXnv1aPM4="
+          "hash": "J2Ucrckdx4dg4IZOx6kwfAACTTn8pqVwhGnYicz3XjE="
         }
       },
       "is_incremental": false,
@@ -390,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "snnx5YwsLFIXKjnxTTgut9IK0KGCHytAtEWnMqrz9AY="
+          "hash": "RGOe+nGRQ/4BpLyKhtybHQ3BPXhrRTC/HDq1Kcpsg/k="
         }
       },
       "is_incremental": false,
@@ -401,11 +425,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
@@ -417,7 +441,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 24,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
@@ -438,8 +462,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

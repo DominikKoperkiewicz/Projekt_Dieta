@@ -30,9 +30,12 @@ namespace Projekt_Dieta.Views
         public MenuView()
         {
             InitializeComponent();
-
         }
-
+        /// <summary>
+        /// Method responsible for loading list of dishes
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         private async Task LoadDishes(string query)
         {
             var dish = await DishProcessor.LoadDishes(query);
@@ -43,7 +46,11 @@ namespace Projekt_Dieta.Views
                 DataGridXAML.Items.Add(item);
             }
         }
-
+        /// <summary>
+        /// Event handler responsible for searching proper dishes after pressing 'Enter'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void MenuView_EnterKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
@@ -55,7 +62,11 @@ namespace Projekt_Dieta.Views
                 LoadDishes(searchText);
             }
         }
-
+        /// <summary>
+        /// Event handler responsible for changing view to proper DishView after double-clicking dish from the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
         {
             DataGridRow row = sender as DataGridRow;

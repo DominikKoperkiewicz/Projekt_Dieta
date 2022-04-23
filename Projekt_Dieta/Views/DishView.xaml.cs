@@ -19,7 +19,7 @@ using System.Windows.Shapes;
 namespace Projekt_Dieta.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy DishView.xaml
+    /// Interaction logic for DishView.xaml
     /// </summary>
     public partial class DishView : Page
     {
@@ -32,13 +32,18 @@ namespace Projekt_Dieta.Views
             Load();
 
         }
-
+        /// <summary>
+        /// Method responsible for loading single dish with corresponding id
+        /// </summary>
+        /// <returns></returns>
         private async Task Load()
         {
                 currentDish = await DishProcessor.LoadDish(DishID);
                 LoadPage();
         }
-
+        /// <summary>
+        /// Method responsible for setting displayed content to proper dish 
+        /// </summary>
         private void LoadPage()
         {
             titleLabel.Content = currentDish.Title;
@@ -47,7 +52,11 @@ namespace Projekt_Dieta.Views
             txtNutrients.Text = currentDish.Nutrition.NutriInfoStringLong();
             NutrientsLabel.Content = $"Nutrients in {currentDish.Servings} servings";
         }
-
+        /// <summary>
+        /// Event handler responsible for adding new entry to database after clicking 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
             if(datePicker.SelectedDate != null)
@@ -57,6 +66,10 @@ namespace Projekt_Dieta.Views
                 datePicker.SelectedDate = null;
             }
         }
+        /// <summary>
+        /// Method responsible for adding new entry to database
+        /// </summary>
+        /// <param name="entry"></param>
         private void AddNewEntry(Entry entry)
         {
             using (var context = new EntriesContext())

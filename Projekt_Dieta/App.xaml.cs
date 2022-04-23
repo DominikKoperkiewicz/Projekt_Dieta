@@ -9,7 +9,7 @@ using System.Windows;
 namespace Projekt_Dieta
 {
     /// <summary>
-    /// Logika interakcji dla klasy App.xaml
+    /// Interaction logic for the App.xaml
     /// </summary>
     public partial class App : Application
     {
