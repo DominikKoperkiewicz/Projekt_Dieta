@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['nutriinfocalories_0',['NutriInfoCalories',['../class_projekt___dieta_1_1_models_1_1_nutrients_info.html#a2cb772c91eb93b7d0fd3c011e231bd4f',1,'Projekt_Dieta::Models::NutrientsInfo']]],
+  ['nutriinfocarbs_1',['NutriInfoCarbs',['../class_projekt___dieta_1_1_models_1_1_nutrients_info.html#a0c897b812a5154d96ab6ae431324dead',1,'Projekt_Dieta::Models::NutrientsInfo']]],
+  ['nutriinfofat_2',['NutriInfoFat',['../class_projekt___dieta_1_1_models_1_1_nutrients_info.html#a00af43c9b9437eeca3e9aad5a3c12245',1,'Projekt_Dieta::Models::NutrientsInfo']]],
+  ['nutriinfoproteins_3',['NutriInfoProteins',['../class_projekt___dieta_1_1_models_1_1_nutrients_info.html#a48902a577777e1bb1e1f1e6de6df7643',1,'Projekt_Dieta::Models::NutrientsInfo']]],
+  ['nutriinfostring_4',['NutriInfoString',['../class_projekt___dieta_1_1_models_1_1_nutrients_info.html#a6a74d05fa4d51be1c3500fde8c087d53',1,'Projekt_Dieta::Models::NutrientsInfo']]]
+];
